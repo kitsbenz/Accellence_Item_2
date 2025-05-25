@@ -1,0 +1,146 @@
+{
+    "info": {
+        "name": "APS Application API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_postman_id": "aps-collection-id"
+    },
+    "item": [
+        {
+            "name": "Submit Application",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"applicantName\": \"John Doe\",\n    \"monthlyIncome\": 50000,\n    \"monthlyExpense\": 20000\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/applications",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Credit Check Status",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "\"APPROVED\""
+                },
+                "url": {
+                    "raw": "http://localhost:8080/applications/1/credit-check-status",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications",
+                        "1",
+                        "credit-check-status"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Applications",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/applications",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Application by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/applications/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Application",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"applicantName\": \"John Doe Updated\",\n    \"monthlyIncome\": 60000,\n    \"monthlyExpense\": 25000,\n    \"creditCheckStatus\": \"PENDING\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/applications/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Application",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/applications/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "applications",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
