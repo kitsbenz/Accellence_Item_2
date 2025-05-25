@@ -63,12 +63,23 @@ public class ApplicationService {
 		return repository.findById(id);
 	}
 
-	public void saveApplication(Application app) {
-		repository.save(app);
+	public Application saveApplication(Application app) {
+		return repository.save(app);
 	}
 
 	public List<Application> getAllApplications() {
 		return repository.findAll();
 	}
+	
+
+	public boolean deleteApplication(Long id) {
+	    if (repository.existsById(id)) {
+	        repository.deleteById(id);
+	        return true;
+	    }
+	    return false;
+	}
+
+	
 
 }
