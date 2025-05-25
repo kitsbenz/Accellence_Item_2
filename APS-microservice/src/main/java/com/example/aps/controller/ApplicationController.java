@@ -77,7 +77,7 @@ public class ApplicationController {
         }
     }
 
-    @DeleteMapping("/applications/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteApplication(@PathVariable Long id) {
         boolean deleted = service.deleteApplication(id);
         if (deleted) {
